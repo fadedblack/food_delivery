@@ -1,11 +1,9 @@
-import { generateOrderID } from "./order.js";
+import { processOrder } from "./src/order.js";
 
-const data = { order: "Burger & Fries" };
+const orders = { order: "Burger & Fries" };
 
-const main = (data) => {
-  const details = {};
-  generateOrderID(details, data);
-  return details;
+const main = (order) => {
+  return processOrder(order); // can put this in try catch block
 };
 
-main(data);
+main(orders);
